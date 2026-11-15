@@ -48,11 +48,15 @@ nav {
 
   .site-logo {
     display: block;
-    height: 2rem;
+    height: 2.15rem;
     width: auto;
-    max-width: min(11.5rem, 42vw);
-    object-fit: contain;
+    max-width: min(14rem, 52vw);
+    overflow: visible;
   }
+}
+
+[data-theme="dark"] .site-logo path[stroke="#253754"] {
+  stroke: #fafafa;
 }
 
 .site-nav-links {

@@ -104,6 +104,20 @@ Images: `assets/images/photos/`.
         - Name
 ```
 
+## Logo (`logo.yml`)
+
+Each `parts` entry is a hoverable line; `id` must match a `data-part` group in `_includes/logo-mark.svg` (`visards`, `wand`, `a`, `black`). 
+
+```yaml
+parts:
+  - id: wand
+    label: The wand
+    html: A magic wand...
+  - id: a
+    label: The A
+    html: The "A" in "Visards" is designed with...
+```
+
 ## Sponsors (`sponsors.yml`)
 
 Logos: `assets/images/sponsors/`.

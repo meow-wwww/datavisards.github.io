@@ -1,0 +1,14 @@
+hint: Hover a line to highlight that part of the mark.
+parts:
+  - id: visards
+    label: Visards
+    html: The logo is built around the word “Visards”.
+  - id: wand
+    label: The wand
+    html: A magic wand from VIS and HCI (the cursor) powers and points our graduate study journey. 
+  - id: a
+    label: The A
+    html: The "A" in "Visards" is designed with one representative color from each Hogwarts house (<span class="logo-house logo-house--gryffindor">Gryffindor</span>, <span class="logo-house logo-house--slytherin">Slytherin</span>, <span class="logo-house logo-house--hufflepuff">Hufflepuff</span>, <span class="logo-house logo-house--ravenclaw">Ravenclaw</span>) to represent a sorting-hat metaphor.
+  - id: black
+    label: Four colors merge into black
+    html: The four colors merge into black, symbolizing how we unite and embody the values of all four houses through our journey here.

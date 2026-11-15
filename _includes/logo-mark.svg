@@ -1,0 +1,33 @@
+<svg class="logo-mark" viewBox="133 112 983.758 270.468" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VisArds">
+  <g class="logo-part" data-part="black">
+    <path d="M149 206L211 362L273 206" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" stroke="#253754"/>
+    <path d="M434 268C430 248 408 242 388 244C364 246 354 262 358 278C362 296 384 300 404 306C428 312 440 326 436 346C432 364 408 368 386 366C364 364 352 352 350 340" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" stroke="#253754"/>
+    <path d="M787 248V362" stroke-width="32" stroke-linecap="round" stroke="#253754"/>
+    <path d="M787 286C797 256 823 244 847 254" stroke-width="32" stroke-linecap="round" stroke="#253754"/>
+    <path d="M972 284.564C958.52 259.583 933.48 249.975 910.37 253.818C881.48 259.583 868 284.564 868 309.545C868 336.447 883.41 361.428 912.3 365.272C935.41 369.115 958.52 357.585 972 334.526" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" stroke="#253754"/>
+    <path d="M976 189V366" stroke-width="32" stroke-linecap="round" stroke="#253754"/>
+    <path d="M1098 268C1094 248 1072 242 1052 244C1028 246 1018 262 1022 278C1026 296 1048 300 1068 306C1092 312 1104 326 1100 346C1096 364 1072 368 1050 366C1028 364 1016 352 1014 340" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" stroke="#253754"/>
+  </g>
+  <g class="logo-part" data-part="a">
+    <rect x="462" y="112" width="292" height="286" fill="transparent"/>
+    <path d="M462 373C494.226 347.444 524.437 258 564.719 258C605 258 649.31 360.222 748 360.222" stroke-width="13" stroke-linecap="round" stroke="#D72D2D"/>
+    <path d="M483 373C544.616 356.097 587.747 242 630.877 242C674.01 242 700.71 345.532 750 360.323" stroke-width="13" stroke-linecap="round" stroke="#39A76E"/>
+    <path d="M467.5 352.5C590 270 616.459 389.256 750 371.009" stroke-width="13" stroke-linecap="round" stroke="#EDB254"/>
+    <path d="M476.5 367C529.508 324.727 564.534 176 609.061 176C653.587 176 702.61 328.954 753.5 367" stroke-width="20" stroke-linecap="round" stroke="#2E67AD"/>
+    <g class="logo-star" aria-hidden="true">
+      <path d="M608 112C610 132 615 137 636 139C615 141 610 146 608 168C606 146 601 141 580 139C601 137 606 132 608 112Z" fill="#E5A924"/>
+    </g>
+  </g>
+  <g class="logo-part" data-part="wand">
+    <circle cx="320" cy="192" r="44" fill="transparent"/>
+    <path d="M321.829 178.882L298.641 213.351C297.038 216.08 298.965 219.048 301.725 218.1L315.315 214.338C317.482 213.774 319.44 214.191 321.19 215.586L331.899 222.979C334.628 224.582 337.596 222.655 337.241 219.509L327.11 180.516C326.755 177.371 323.432 176.153 321.829 178.882Z" fill="#E5A924" stroke-width="3" stroke-linejoin="round" stroke="#E5A924"/>
+    <path d="M314.535 171.006L310.555 163.37" stroke-width="5.5" stroke-linecap="round" stroke="#E5A924"/>
+    <path d="M327.015 168.495L328.517 159.986" stroke-width="5.5" stroke-linecap="round" stroke="#E5A924"/>
+    <path d="M334.5 175.652L341.585 172.13" stroke-width="5.5" stroke-linecap="round" stroke="#E5A924"/>
+  </g>
+  <g class="logo-part logo-i" data-part="black">
+    <rect x="276" y="240" width="54" height="140" fill="transparent"/>
+    <path d="M292.5 362L313.5 244" stroke-width="32" stroke-linecap="round" stroke="#253754"/>
+  </g>
+</svg>
+

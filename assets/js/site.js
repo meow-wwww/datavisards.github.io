@@ -387,6 +387,67 @@
     });
   }
 
+  function initLogoExplorer(root) {
+    var canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    var partCards = Array.prototype.slice.call(root.querySelectorAll(".logo-story-card[data-part]"));
+
+    function clearActive() {
+      delete root.dataset.activePart;
+      partCards.forEach(function (card) { card.setAttribute("aria-pressed", "false"); });
+    }
+
+    function setPart(part) {
+      if (part) root.dataset.activePart = part;
+      else delete root.dataset.activePart;
+      partCards.forEach(function (card) {
+        card.setAttribute("aria-pressed", card.getAttribute("data-part") === part ? "true" : "false");
+      });
+    }
+
+    function activeFromNode(node) {
+      if (!node || !node.closest) return null;
+      var part = node.closest("[data-part]");
+      if (part && root.contains(part)) {
+        return part.getAttribute("data-part");
+      }
+      return null;
+    }
+
+    function applyActive(part) {
+      if (part) setPart(part);
+      else clearActive();
+    }
+
+    var mark = root.querySelector(".logo-mark");
+    if (mark) {
+      mark.addEventListener("pointerdown", function (event) {
+        event.preventDefault();
+      });
+    }
+
+    if (canHover) {
+      root.querySelectorAll("[data-part]").forEach(function (el) {
+        el.addEventListener("pointerenter", function () { applyActive(activeFromNode(el)); });
+        el.addEventListener("pointerleave", function (event) {
+          applyActive(activeFromNode(event.relatedTarget));
+        });
+        el.addEventListener("focus", function () { applyActive(activeFromNode(el)); });
+        el.addEventListener("blur", function () {
+          applyActive(activeFromNode(document.activeElement));
+        });
+      });
+      return;
+    }
+
+    partCards.forEach(function (card) {
+      card.addEventListener("click", function () {
+        var part = card.getAttribute("data-part");
+        if (root.dataset.activePart === part) clearActive();
+        else setPart(part);
+      });
+    });
+  }
+
   document.addEventListener("click", function (event) {
     document.querySelectorAll("details.link-menu[open]").forEach(function (menu) {
       if (!menu.contains(event.target)) menu.removeAttribute("open");
@@ -397,6 +458,7 @@
   document.querySelectorAll("[data-theme-toggle]").forEach(initThemeToggle);
   document.querySelectorAll("[data-filter-root]").forEach(initFilters);
   document.querySelectorAll("[data-photo-carousel]").forEach(initPhotoCarousel);
+  document.querySelectorAll("[data-logo-explorer]").forEach(initLogoExplorer);
   initGithubStars();
 
   document.querySelectorAll("[data-copy-target]").forEach(function (button) {
