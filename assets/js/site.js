@@ -418,7 +418,7 @@
       else clearActive();
     }
 
-    var mark = root.querySelector(".logo-mark");
+    var mark = root.querySelector(".logo-mark-stack") || root.querySelector(".logo-mark");
     if (mark) {
       mark.addEventListener("pointerdown", function (event) {
         event.preventDefault();

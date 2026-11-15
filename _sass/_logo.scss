@@ -24,7 +24,27 @@ $logo-ink: #253754;
   border: 1px solid $border-color;
   border-radius: 12px;
   background: #fff;
+  overflow: visible;
   transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.logo-mark-stack {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.logo-layer {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  pointer-events: none;
+  transition: filter 0.22s ease;
+}
+
+.logo-layer:not(:first-child) {
+  position: absolute;
+  inset: 0;
 }
 
 .logo-mark {
@@ -44,9 +64,14 @@ $logo-ink: #253754;
   }
 }
 
+.logo-layer:not(:first-child) .logo-mark {
+  height: 100%;
+}
+
 .logo-part {
   cursor: pointer;
-  transition: opacity 0.22s ease, filter 0.22s ease;
+  pointer-events: auto;
+  transition: opacity 0.22s ease;
   -webkit-tap-highlight-color: transparent;
 
   &:focus,
@@ -139,6 +164,12 @@ $logo-ink: #253754;
   transform: translateY(-1px);
 }
 
+@mixin logo-glow($color, $alpha) {
+  $shadow: drop-shadow(0 0 8px rgba($color, $alpha));
+  -webkit-filter: $shadow;
+  filter: $shadow;
+}
+
 .logo-explorer[data-active-part="visards"] {
   .logo-stage {
     border-color: color-mix(in srgb, $accent-color 45%, $border-color);
@@ -156,9 +187,9 @@ $logo-ink: #253754;
     opacity: 0.12;
   }
 
-  .logo-part[data-part="wand"],
-  .logo-i {
-    filter: drop-shadow(0 0 8px rgba($logo-wand, 0.48));
+  .logo-layer--wand,
+  .logo-layer--i {
+    @include logo-glow($logo-wand, 0.48);
   }
 
   .logo-story-card[data-part="wand"] {
@@ -172,8 +203,8 @@ $logo-ink: #253754;
     opacity: 0.16;
   }
 
-  .logo-part[data-part="a"] {
-    filter: drop-shadow(0 0 8px rgba(46, 103, 173, 0.28));
+  .logo-layer--a {
+    @include logo-glow(#2e67ad, 0.28);
   }
 
   .logo-story-card[data-part="a"] {
@@ -187,8 +218,9 @@ $logo-ink: #253754;
     opacity: 0.12;
   }
 
-  .logo-part[data-part="black"] {
-    filter: drop-shadow(0 0 8px rgba($logo-ink, 0.48));
+  .logo-layer--black,
+  .logo-layer--i {
+    @include logo-glow($logo-ink, 0.48);
   }
 
   .logo-story-card[data-part="black"] {
@@ -206,6 +238,7 @@ $logo-ink: #253754;
   .logo-part,
   .logo-star,
   .logo-stage,
+  .logo-layer,
   .logo-story-card {
     transition: none;
   }

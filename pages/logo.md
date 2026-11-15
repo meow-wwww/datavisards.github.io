@@ -14,7 +14,7 @@ description: The VisArds logo — a wand from VIS and HCI, a sorting-hat A in th
 
 <div class="logo-explorer" data-logo-explorer>
   <div class="logo-stage">
-    {% include logo-mark.svg %}
+    {% include logo-mark.html %}
   </div>
 
   <p class="logo-hint">{{ logo.hint }}</p>

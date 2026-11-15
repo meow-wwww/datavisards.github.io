@@ -106,7 +106,7 @@ Images: `assets/images/photos/`.
 
 ## Logo (`logo.yml`)
 
-Each `parts` entry is a hoverable line; `id` must match a `data-part` group in `_includes/logo-mark.svg` (`visards`, `wand`, `a`, `black`). 
+Each `parts` entry is a hoverable line; `id` must match a `data-part` group in `_includes/logo-mark.html` (`visards`, `wand`, `a`, `black`). The mark is split into stacked SVG layers so the hover glow can use a CSS `drop-shadow` on HTML wrappers — Safari does not apply CSS filters to inner SVG `<g>` elements. 
 
 ```yaml
 parts:
