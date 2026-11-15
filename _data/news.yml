@@ -1,4 +1,9 @@
 # Newest first. Categories: Milestones | Conference | Publications | Talks | Awards
+- date: 2026-11-15
+  title: We now have a new logo for our lab!
+  categories: [Milestones]
+  links:
+    - { label: Discover the design metaphors behind it, url: /logo/ }
 - date: 2026-11-09
   title: Two papers at IEEE VIS 2026. Congrats Theo and Shuvam!
   categories: [Publications, Conference, Talks]
