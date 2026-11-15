@@ -6,6 +6,7 @@ $logo-houses: (
 );
 
 $logo-wand: #e5a924;
+$logo-star: #e5a924;
 $logo-ink: #253754;
 
 .logo .page-content {
@@ -81,7 +82,6 @@ $logo-ink: #253754;
 }
 
 .logo-star {
-  pointer-events: none;
   transition: opacity 0.22s ease, filter 0.22s ease;
 }
 
@@ -187,9 +187,12 @@ $logo-ink: #253754;
     opacity: 0.12;
   }
 
-  .logo-layer--wand,
-  .logo-layer--i {
+  .logo-layer--wand {
     @include logo-glow($logo-wand, 0.48);
+  }
+
+  .logo-layer--i {
+    @include logo-glow($logo-ink, 0.48);
   }
 
   .logo-story-card[data-part="wand"] {
@@ -203,8 +206,14 @@ $logo-ink: #253754;
     opacity: 0.16;
   }
 
-  .logo-layer--a {
-    @include logo-glow(#2e67ad, 0.28);
+  @each $house, $color in $logo-houses {
+    .logo-layer--a-#{$house} {
+      @include logo-glow($color, 0.48);
+    }
+  }
+
+  .logo-layer--star {
+    @include logo-glow($logo-star, 0.48);
   }
 
   .logo-story-card[data-part="a"] {
